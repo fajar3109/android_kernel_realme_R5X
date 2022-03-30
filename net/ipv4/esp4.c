@@ -267,6 +267,9 @@ int esp_output_head(struct xfrm_state *x, struct sk_buff *skb, struct esp_info *
 			return err;
 	}
 
+/* On 32bit arches, an skb frag is limited to 2^15 */
+#define SKB_FRAG_PAGE_ORDER	get_order(32768)
+
 	allocsz = ALIGN(skb->data_len + tailen, L1_CACHE_BYTES);
 	if (allocsz > ESP_SKB_FRAG_MAXSIZE)
 		goto cow;
