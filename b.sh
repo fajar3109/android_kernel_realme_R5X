@@ -1,5 +1,5 @@
 SECONDS=0 # builtin bash timer
-ZIPNAME="Trashed-4.14.276_$(date '+%Y%m%d-%H%M').zip"
+ZIPNAME="Trashed-4.14.277_$(date '+%Y%m%d-%H%M').zip"
 TC_DIR="/workspace/Gitpod-Workspaces/proton"
 AK3_DIR="anykernel3"
 DEFCONFIG="vendor/RMX1911_defconfig"
